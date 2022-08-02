@@ -5,21 +5,21 @@
 class Jotty < Formula
   desc "This tool to decode jwt tokens and print out the JSON"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.3"
+  version "0.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/jotty/releases/download/0.3/jotty_0.3_Darwin_arm64.tar.gz"
-      sha256 "7dc7089e565b6cbc351fd19ad642d0900332da9c887b244f06c3379a4fa474b0"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Darwin_x86_64.tar.gz"
+      sha256 "69095a3beaa45f4640a92d34f9fb8b20eca239b43ef898746e99ad0107263584"
 
       def install
         bin.install "jotty"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.3/jotty_0.3_Darwin_x86_64.tar.gz"
-      sha256 "0ac92ae66fffade040531dcacd2dd413b83475c167db045c8a48c6b4da740a07"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Darwin_arm64.tar.gz"
+      sha256 "d66e9100ce2378914c83dfc6cf1418f3b16a7dea798bfe8e1a8b58009fb51a1d"
 
       def install
         bin.install "jotty"
@@ -28,17 +28,17 @@ class Jotty < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.3/jotty_0.3_Linux_x86_64.tar.gz"
-      sha256 "017c1c109d2e8dbe3bbd68db12471e089df266c75f70dbe0c1f69bf65e06d4d0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Linux_arm64.tar.gz"
+      sha256 "0bab7cc6e7483f3f67e73920ceff6d254d26dfe8a790f0b24cd45c6de1b862ab"
 
       def install
         bin.install "jotty"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/jotty/releases/download/0.3/jotty_0.3_Linux_arm64.tar.gz"
-      sha256 "be7ae3786dc8021aee851d4af43e7590a0d2ef8d0481ec79e888619905847df7"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Linux_x86_64.tar.gz"
+      sha256 "8fee96c084136b3df9ac93cdd6a3135677c967364789000502cd714e400cd9b3"
 
       def install
         bin.install "jotty"
