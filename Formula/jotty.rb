@@ -5,21 +5,21 @@
 class Jotty < Formula
   desc "This tool to decode jwt tokens and print out the JSON"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.4"
+  version "0.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Darwin_x86_64.tar.gz"
-      sha256 "69095a3beaa45f4640a92d34f9fb8b20eca239b43ef898746e99ad0107263584"
+      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Darwin_x86_64.tar.gz"
+      sha256 "467ccbfe7ad3b12ce4d25ce31f251562b60ff58fbf2be0730ce17e782d38c3a7"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Darwin_arm64.tar.gz"
-      sha256 "d66e9100ce2378914c83dfc6cf1418f3b16a7dea798bfe8e1a8b58009fb51a1d"
+      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Darwin_arm64.tar.gz"
+      sha256 "caae727f5cfdd14a32c2e9c35d279d6dee4e515cf532c0147a14eaf480254228"
 
       def install
         bin.install "jotty"
@@ -28,17 +28,17 @@ class Jotty < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Linux_arm64.tar.gz"
-      sha256 "0bab7cc6e7483f3f67e73920ceff6d254d26dfe8a790f0b24cd45c6de1b862ab"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Linux_x86_64.tar.gz"
+      sha256 "c8ab93481ae4dee05c5be2ee9f959bbe9be4706c6f35b67b35e6c84ac2589cac"
 
       def install
         bin.install "jotty"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.4/jotty_0.4_Linux_x86_64.tar.gz"
-      sha256 "8fee96c084136b3df9ac93cdd6a3135677c967364789000502cd714e400cd9b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Linux_arm64.tar.gz"
+      sha256 "631ad2079a016a5c1188245b1d92cf9c900abb55b4beda0a15b444acfe384cd1"
 
       def install
         bin.install "jotty"
