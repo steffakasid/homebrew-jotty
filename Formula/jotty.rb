@@ -5,21 +5,21 @@
 class Jotty < Formula
   desc "This tool to decode jwt tokens and print out the JSON"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.5"
+  version "0.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Darwin_x86_64.tar.gz"
-      sha256 "467ccbfe7ad3b12ce4d25ce31f251562b60ff58fbf2be0730ce17e782d38c3a7"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/jotty/releases/download/0.6/jotty_0.6_Darwin_arm64.tar.gz"
+      sha256 "9876863323f79cdb12650467476d3d3c001df2759f502b8ea42662c9ef5eaf58"
 
       def install
         bin.install "jotty"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Darwin_arm64.tar.gz"
-      sha256 "caae727f5cfdd14a32c2e9c35d279d6dee4e515cf532c0147a14eaf480254228"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/jotty/releases/download/0.6/jotty_0.6_Darwin_x86_64.tar.gz"
+      sha256 "97293cee8c01c6de5b43438d27387b645e963500cfe901d66314e0d50a1f41fa"
 
       def install
         bin.install "jotty"
@@ -29,16 +29,16 @@ class Jotty < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Linux_x86_64.tar.gz"
-      sha256 "c8ab93481ae4dee05c5be2ee9f959bbe9be4706c6f35b67b35e6c84ac2589cac"
+      url "https://github.com/steffakasid/jotty/releases/download/0.6/jotty_0.6_Linux_x86_64.tar.gz"
+      sha256 "aaee2aa2de019db93b318c8f6174abb2d6a53c81ce4a2672dc44e52e63eb9b29"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/jotty/releases/download/0.5/jotty_0.5_Linux_arm64.tar.gz"
-      sha256 "631ad2079a016a5c1188245b1d92cf9c900abb55b4beda0a15b444acfe384cd1"
+      url "https://github.com/steffakasid/jotty/releases/download/0.6/jotty_0.6_Linux_arm64.tar.gz"
+      sha256 "4769085d2490822302d49e22556c3ef3d0d609fe064c0fb84248aa9e8bfd7471"
 
       def install
         bin.install "jotty"
