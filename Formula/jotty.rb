@@ -5,21 +5,21 @@
 class Jotty < Formula
   desc "This tool to decode jwt tokens and print out the JSON"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.8"
+  version "0.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.8/jotty_0.8_Darwin_x86_64.tar.gz"
-      sha256 "0c64ff6e7d73c85d213bab88a3bee8c0c3e626f17059b9b9e115554863dd0e79"
+      url "https://github.com/steffakasid/jotty/releases/download/0.9/jotty_0.9_Darwin_x86_64.tar.gz"
+      sha256 "e21392e4ca6808f7c96ca8960b539a0816653cab2e1256807cbcf1c1f38cd0ab"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/jotty/releases/download/0.8/jotty_0.8_Darwin_arm64.tar.gz"
-      sha256 "c26c2cc60c11ae2a96a631d46bc6089ef1b8f02e76b40d067d9ee359bc5c0fdf"
+      url "https://github.com/steffakasid/jotty/releases/download/0.9/jotty_0.9_Darwin_arm64.tar.gz"
+      sha256 "cb262cca37ff34f6e36fa21a0cc7db49df543b2ee90aaa237c94019089f4707b"
 
       def install
         bin.install "jotty"
@@ -29,16 +29,16 @@ class Jotty < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/jotty/releases/download/0.8/jotty_0.8_Linux_arm64.tar.gz"
-      sha256 "84b376a9ae4d9d08c2df7b51debd3f3da4866b1d07a43c0aa5055561c5c5f6bb"
+      url "https://github.com/steffakasid/jotty/releases/download/0.9/jotty_0.9_Linux_arm64.tar.gz"
+      sha256 "0d4c55d64001b6318e1dc3c7fc66efe0851b5751438c1ff0a3f1d15e888fa6d6"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/0.8/jotty_0.8_Linux_x86_64.tar.gz"
-      sha256 "5250af35e527e592d0d917887013a44a4aa5e71c390fe35c6df7eec098dedaaf"
+      url "https://github.com/steffakasid/jotty/releases/download/0.9/jotty_0.9_Linux_x86_64.tar.gz"
+      sha256 "45081e41742fd9fa2d30539f56c8a944c51bb86bf15635f9228c20ccdd4ebd59"
 
       def install
         bin.install "jotty"
