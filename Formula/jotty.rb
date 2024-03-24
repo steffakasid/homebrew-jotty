@@ -5,21 +5,21 @@
 class Jotty < Formula
   desc "This tool to decode jwt tokens and print out the JSON"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "1.00"
+  version "1.01"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/jotty/releases/download/v1.00/jotty_1.00_darwin_arm64.tar.gz"
-      sha256 "6ea1e16ef3e06b4c324ab608527515e3cf937a1998b4f16bbd8e24fad00e68e4"
+      url "https://github.com/steffakasid/jotty/releases/download/v1.01/jotty_1.01_darwin_arm64.tar.gz"
+      sha256 "6541fa179213e7c9d844e74d208edf42878e840f1bf68c3abaf2a36d369db213"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/v1.00/jotty_1.00_darwin_amd64.tar.gz"
-      sha256 "6f371eb94432cbd457a119d2dee17deed50256bec48506faac1886d84c9b866a"
+      url "https://github.com/steffakasid/jotty/releases/download/v1.01/jotty_1.01_darwin_amd64.tar.gz"
+      sha256 "b54ddfb367eec94f70c074a8d61b524ac283841aba8846e88ebe3c940938a616"
 
       def install
         bin.install "jotty"
@@ -29,16 +29,16 @@ class Jotty < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/jotty/releases/download/v1.00/jotty_1.00_linux_arm64.tar.gz"
-      sha256 "0295e676d2fcb5820b30c1e57cb9999c3ce6dd57f5844865f665d62da4574792"
+      url "https://github.com/steffakasid/jotty/releases/download/v1.01/jotty_1.01_linux_arm64.tar.gz"
+      sha256 "191f2bc960f77465d8f92fbb11884cbc3ff4648599ed0d841e145ecf86ff8d31"
 
       def install
         bin.install "jotty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/jotty/releases/download/v1.00/jotty_1.00_linux_amd64.tar.gz"
-      sha256 "2fcb53fca60d1455729f64abeba53344d0762bd28d8b50bd0400d26c04326e2a"
+      url "https://github.com/steffakasid/jotty/releases/download/v1.01/jotty_1.01_linux_amd64.tar.gz"
+      sha256 "ebe71f3575b8af77d1563eb5e3c92c6855f35e24b5dfb08e9d70bf73ed519c85"
 
       def install
         bin.install "jotty"
